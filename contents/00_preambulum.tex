@@ -1,0 +1,107 @@
+% -------------------------------------------------------------------
+% Fájl: 00_preambulum.tex
+% -------------------------------------------------------------------
+
+% Packagek
+%% Dokumentum konfiguráció
+\usepackage[english]{babel} % dokumentum nyelve
+\usepackage{t1enc} % dokumentum kódolása
+\usepackage{geometry} % dokumentum formátum
+\usepackage{hyperref} % hivatkozások
+%\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % irodalomjegyzék
+
+%% Ábrák, grafikák
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{structmech}
+
+%% Matematikai és fizikai írásmód
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matek
+\usepackage{nicefrac}
+\usepackage{mathtools}
+\usepackage{siunitx}
+
+%% Fejléc, lábléc
+\usepackage{fancyhdr}
+\usepackage{lastpage} % utolsó oldal sorszáma
+
+%% Dokumentumtagolás
+\usepackage{titlesec}
+\usepackage{csquotes}
+\usepackage{booktabs}
+
+%% Animáció
+%\usepackage{animate}
+
+% -------------------------------------------------------------------
+% Dokumentum beállítások
+%% Dokumentum formátum
+\geometry{a4paper,total={170mm,240mm},left=20mm,top=30mm}
+\setlength\parindent{0pt}
+
+%% Fejléc, lábléc beállítása
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\headheight 1.5em
+\rhead{\NEV{}, \NEPTUN{}}
+\chead{}
+\lhead{\TANTARGYKOD{}, \TANTARGY{}}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage\ / \pageref{LastPage}}
+\headsep 1.5em
+
+
+%% Mértékegységek formátuma
+\sisetup{exponent-product = \cdot, per-mode=fraction}
+
+%% Tikz
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+
+%% Színek
+\definecolor{YELLOW}{HTML}{f2f1c1}
+\definecolor{GREEN}{HTML}{2d5c38}
+\definecolor{RED}{HTML}{a23635}
+\definecolor{BLUE}{HTML}{2a3373}
+\definecolor{BROWN}{HTML}{62482d}
+\definecolor{GRAY}{HTML}{e5e5e0}
+
+%% Irodalomjegyék beállítása
+%\addbibresource{contents/literature.bib}
+
+%% Táblázat formátum beállítása
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand{\arraystretch}{1.25}
+
+%% Számozások beállítása fejezetenként
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+% \numberwithin{table}{section}
+
+%% Fejezet címek beállításai
+% \titlelabel{\thetitle.\quad}
+
+%% Felsorolási szintek
+\renewcommand\labelitemii{$\to$}
+\renewcommand\labelitemiii{-}
+
+%-------------------------------------------------------------------
+% Parancsok
+%% Matematikai parancsok
+\renewcommand{\d}[1]{\mathrm{d}#1}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+%% Egyéb parancsok
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{c}#2\end{tabular}}
+\newcommand*\circled[1]{\begin{tikzpicture}[baseline=(C.base)] \node[draw,circle,inner sep=2pt](C) {#1}; \end{tikzpicture}}
+
+
