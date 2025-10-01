@@ -1,53 +1,90 @@
-% -------------------------------------------------------------------
+% ==================================================
+%   LaTeX sablon - Dokumentáció/HF/Beadandó
+%
+%   Készítette:        Agócs Norbert
+%   Dátum:             2025.09.01.
+%   Utolsó frissítés:  2025.10.01.
+%
+%   License: MIT
+% ==================================================
+
+% --------------------------------------------------
 % Fájl: main.tex
-% -------------------------------------------------------------------
+% --------------------------------------------------
 
-% Packagek és dokumentum konfiguráció
-\documentclass[fleqn,12pt]{article} % dokumentum formátum
-\input{contents/00_preambulum.tex}
+% Dokumentum konfiguráció
+\documentclass[fleqn,12pt]{article}
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
 % Dokumentum adatok
-\newcommand\CIM{Title}
-\newcommand\DATUM{Date}
-\newcommand\NEV{Agócs Norbert}
-\newcommand\NEPTUN{PKB316}
-\newcommand\EMAIL{nagocs@mm.bme.hu}
+% --------------------------------------------------
+
+% Intézmény és kar
+\newcommand\INTEZMENY{Budapesti Műszaki és Gazdaságtudományi Egyetem}
+\newcommand\KAR{Gépészmérnöki Kar}
+\newcommand\LOGO{bme-logo.jpg} % logo fájl neve a figures mappában
+
+% Dokumentum adatok
+% TODO
+\newcommand\CIM{Dokumentáció sablon}
+\newcommand\DATUM{2025/26/1}
+\newcommand\NEV{Beadan Dóra}
+\newcommand\NEPTUN{BATMAN}
+\newcommand\EMAIL{beadan.dora@gmail.com}
 \newcommand\TANTARGY{Tantárgy}
 \newcommand\TANTARGYKOD{BMEGE\dots}
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
+% Preambulum és egyéni parancsok betöltése
+% --------------------------------------------------
+
+\input{settings/00_preambulum.tex}
+\input{settings/01_commands.tex}
+
+% ==================================================
 % Dokumentum kezdete
+% ==================================================
 \begin{document}
 
 % Címlap és tartalomjegyzék
 \input{contents/01_title.tex}
-%\includepdf[pages=-]{contents/hw_description.pdf}
+%\includepdf[pages=-]{contents/feladatlap.pdf} % feladatlap beszúrása, ha szükséges
 \input{contents/02_contentpage.tex}
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
 % 0. fejezet
-\section{Introduction}
-asd
+% --------------------------------------------------
+\section{Feladatleírás}
 
-
-% -------------------------------------------------------------------
+% --------------------------------------------------
 % 1. fejezet
-\section{Task 1}
+% --------------------------------------------------
+\section{Feladat: \dots}
 
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
 % 2. fejezet
-\section{Task 2}
+% --------------------------------------------------
+
+\section{Feladat: \dots}
 
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
 % 3. fejezet
-\section{Summary}
+% --------------------------------------------------
 
+\section{Összefoglalás}
 
-% -------------------------------------------------------------------
+% --------------------------------------------------
+% Irodalomjegyzék
+% --------------------------------------------------
+
+% \input{contents/03_bib.tex}
+
+% --------------------------------------------------
 % Függelék
-%\includepdf[pages=-]{contents/hw_solution.pdf}
+% --------------------------------------------------
+
+%\includepdf[pages=-]{contents/programkod.pdf} programkód beszúrása, ha szükséges
 
 \end{document}

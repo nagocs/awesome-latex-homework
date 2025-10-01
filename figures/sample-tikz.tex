@@ -1,0 +1,55 @@
+\begin{tikzpicture}[
+    % --- Saját stílusok definiálása ---
+    vec/.style = {color=#1,very thick,-latex}, % vektor stílus, nyíllal
+    link/.style = {color=#1, thick},           % vonal stílus
+    point/.style = {circle,fill=black,inner sep = 1.5pt}, % csomópontok
+    guide/.style = {color=#1,thin},            % segédvonal stílus
+    coordSys/.style = {color=#1, thick,-latex} % koordinátarendszer nyilai
+    ]
+
+    % --- Paraméterek definiálása ---
+    \def\r{2}        % sugár
+    \def\phi{60}     % szög (fokban)
+
+    % --- Koordináták megadása ---
+    \coordinate (A) at (0,0);                            % A pont (origó)
+    \coordinate (B) at (\r,\r);                          % B pont
+    \coordinate (C) at (2*\r,0);                         % C pont
+    \coordinate (O) at (\r,0);                           % O középpont
+    \coordinate (P) at ({\r+\r*cos(\phi)},{\r*sin(\phi)}); % P pont (szög szerint)
+
+    % --- Test (félkörív) kirajzolása ---
+    \draw[link={black}] (A) arc (180:0:\r);
+
+    % --- Erő vektora ---
+    \draw[vec={green!50!black}] (C) -- node[midway, right] {$F$} +(0,-1);
+
+    % --- Koordináta-rendszer kirajzolása ---
+    \draw[coordSys={red}] (A) -- +(0,1) node[left] {$y$};  % y tengely
+    \draw[coordSys={red}] (A) -- +(1,0) node[above] {$x$}; % x tengely
+
+    % --- Támasz (háromszög és görgők) C pontnál ---
+    \draw[link={black}, fill=white] (C) -- ($(C)+(0.35, 0.25)$) -- ($(C)+(0.35, -0.25)$) -- cycle;
+    \foreach \i in {-0.15, 0, 0.15} {
+        \draw[link={black}, fill=white] ($(C)+(0.425, \i)$) circle (0.075);
+    }
+
+    % --- Talaj ábrázolása A és C pont alatt ---
+    \fill[gray!20!white] ($(A)+(-0.5,0)$) rectangle ($(A)+(0.5,-0.5)$);
+    \draw[black,very thick] ($(A)+(-0.5,0)$) -- ($(A)+(0.5,0)$);
+    \fill[gray!20!white] ($(C)+(0.5,0.5)$) rectangle ($(C)+(0.75,-0.5)$);
+    \draw[black,very thick] ($(C)+(0.5,0.5)$) -- ($(C)+(0.5,-0.5)$);
+    
+    % --- Csomópontok megrajzolása ---
+    \node[point] at (A) {};
+    \node[point] at (B) {};
+    \node[point] at (C) {};
+    \node[above left] at (A) {$A$};
+    \node[above] at (B) {$B$};
+    \node[above left] at (C) {$C$};
+
+    % --- Segédvonalak és sugár vektora ---
+    \draw[guide={gray}, dashed] (A) -- (C);      % A és C közötti szaggatott vonal
+    \draw[guide={gray}, dashed] (B) -- +(0,-\r); % B-ből függőleges segédvonal
+    \draw[guide={blue}, -latex] (O) -- node[above left] {$R$} (P); % sugár vektor
+\end{tikzpicture}

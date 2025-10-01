@@ -1,40 +1,54 @@
-%-------------------------------------------------------------------
+% --------------------------------------------------
+
 % Fájl: 01_title.tex
-%-------------------------------------------------------------------
+% --------------------------------------------------
 
+
+% --------------------------------------------------
 % Oldal beállítások
-\frenchspacing
-\thispagestyle{empty} % Ne legyen header
+% --------------------------------------------------
 
-%-------------------------------------------------------------------
+\frenchspacing % ne legyen extra szóköz
+\thispagestyle{empty} % ne legyen fejléc/lábléc
+
+% --------------------------------------------------
 % Fejléc
+% --------------------------------------------------
+
 \begin{center}
-   \includegraphics[width=0.35\linewidth]{figures/bme-logo.jpg} \\
-   \vskip 0.5em
-   \textsc{Budapesti Műszaki és Gazdaságtudományi Egyetem} \\
-   \textsc{Gépészmérnöki Kar}
+   \includegraphics[width=0.35\linewidth]{figures/\LOGO} % intézmény logója
+   \vskip 0.5em % kis függőleges térköz
+   \textsc{\INTEZMENY} % intézmény neve
+   \\ % soremelés
+   \textsc{\KAR} % kar neve 
 \end{center}
 
-%-------------------------------------------------------------------
+% --------------------------------------------------
 % Elválasztóvonal
+% --------------------------------------------------
+
 \begin{center}
-   \noindent\rule{0.99\textwidth}{0.25pt}
+   \noindent\rule{0.99\textwidth}{0.25pt} % vízszintes elválasztóvonal
 \end{center}
 
-%-------------------------------------------------------------------
+% --------------------------------------------------
 % Cím
+% --------------------------------------------------
+
 \begin{center}
-   \LARGE{\textbf{\CIM}} \\
+   \LARGE{\textbf{\CIM}} \\ % dokumentum címe
    \vskip 0.5em
-   \large{\TANTARGY{} (\TANTARGYKOD{})} \\
+   \large{\TANTARGY{} (\TANTARGYKOD{})} \\ % tantárgy neve és kódja
    \vskip 0.25em
-   \large{\NEV{} (\url{\EMAIL})} \\
+   \large{\NEV{} (\url{\EMAIL})} \\ % hallgató neve és e-mail címe
    \vskip 0.25em
-   \DATUM{}
+   \DATUM{} % dátum megjelenítése
 \end{center}
 
-%-------------------------------------------------------------------
+% --------------------------------------------------
 % Elválasztóvonal
+% --------------------------------------------------
+
 \begin{center}
-   \noindent\rule{0.99\textwidth}{0.25pt}
+   \noindent\rule{0.99\textwidth}{0.25pt} % vízszintes elválasztóvonal
 \end{center}

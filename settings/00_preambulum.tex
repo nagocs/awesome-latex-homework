@@ -1,0 +1,100 @@
+% --------------------------------------------------
+% Fájl: 00_preambulum.tex
+% --------------------------------------------------
+
+% --------------------------------------------------
+% Packagek
+% --------------------------------------------------
+
+% Dokumentum konfiguráció
+\usepackage[hungarian]{babel} % dokumentum nyelvi beállítása
+\usepackage[utf8]{inputenc} % bemeneti betűkódolás (ékezetes karakterek)
+\usepackage[T1]{fontenc} % kimeneti betűkódolás (ékezetes karakterek)
+\usepackage{lmodern} % bővített karakterkészlet az ékezetekhez
+\usepackage{geometry} % dokumentum margók és oldalbeállítások
+\usepackage{hyperref} % hivatkozások és linkek
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % irodalomjegyzék
+
+% Ábrák, grafikák
+\usepackage{graphicx} % klépek beillesztése és méretezése
+\usepackage{float} % ábrák és táblázatok elhelyezésének pontos szabályozása
+\usepackage{caption} % képaláírások formázása
+\usepackage{tikz} % vektorgrafikák, ábrák rajzolása LaTeX-ben
+\usepackage{xcolor} % színek kezelése
+\usepackage{pdfpages} % teljes PDF-oldalak beillesztése a dokumentumba
+
+% Matematikai és fizikai írásmód
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matematikai környezetek és szimbólumok
+\usepackage{mathtools} % kiegészítő matematikai eszközök az amsmath-hoz
+\usepackage{siunitx} % SI mértékegységek helyes jelölése
+
+% Fejléc, lábléc
+\usepackage{fancyhdr} % egyedi fejléc és lábléc készítése
+\usepackage{lastpage} % az utolsó oldal sorszámának hivatkozása
+
+% Dokumentumtagolás
+\usepackage{titlesec} % címsorok formázásának testreszabása
+\usepackage{csquotes} % idézetek helyes formázása (nyelvspecifikus)
+\usepackage{booktabs} % szép, tipográfiailag helyes táblázatok készítése
+
+
+% --------------------------------------------------
+% Dokumentum beállítások
+% --------------------------------------------------
+
+% Dokumentum formátum
+\geometry{a4paper,total={170mm,240mm},left=20mm,top=30mm} % oldalbeállítások: A4, margók méretezése
+\setlength\parindent{0pt} % bekezdések behúzásának kikapcsolása
+
+% Fejléc, lábléc beállítása
+\pagestyle{fancy} % fancyhdr csomag stílus használata
+\renewcommand{\headrulewidth}{0.4pt} % fejléc vonalvastagsága
+\renewcommand{\footrulewidth}{0.4pt} % lábléc vonalvastagsága
+\headheight 1.5em % fejléc magasságának beállítása
+\rhead{\NEV{}, \NEPTUN{}} % jobb felső sarok
+\chead{} % középső fejléc
+\lhead{\TANTARGYKOD{}, \TANTARGY{}} % bal felső sarok
+\lfoot{} % bal alsó sarok
+\cfoot{} % középső lábléc
+\rfoot{\small\thepage\ / \pageref{LastPage}} % jobb alsó sarok
+\headsep 1.5em % fejléc és szöveg közötti távolság
+
+% Hyperref beállítások - PDF megjelenítés
+\hypersetup{
+    colorlinks=true, % színes linkek
+    linkcolor=blue, % belső hivatkozások színe
+    urlcolor=cyan, % URL hivatkozások színe
+    pdftitle={\CIM{}}, % PDF cím
+    pdfauthor={\NEV{}}, % PDF szerző
+    pdfsubject={\TANTARGY{} (\TANTARGYKOD{})}, % PDF tárgy
+    bookmarksopen=true, % könyvjelzők alapból nyitva
+    bookmarksnumbered=true, % könyvjelzők számozása
+    pdfpagemode=UseOutlines % könyvjelzők megjelenítése PDF olvasóban
+}
+
+% Irodalomjegyék beállítása
+\addbibresource{contents/literature.bib} % irodalomjegyzék forrásfájl
+
+% Számozások beállítása fejezetenként
+% \numberwithin{equation}{section} % egyenletek számozása fejezetenként
+% \numberwithin{figure}{section} % ábrák számozása fejezetenként
+% \numberwithin{table}{section} % táblázatok számozása fejezetenként
+
+% Táblázat formátum beállítása - Függőlegesen középre igazított szöveg
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % balra zárt
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % középre zárt
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % jobbra zárt
+\renewcommand{\arraystretch}{1.25} % táblázatok sormagassága
+
+% Mértékegységek formátuma
+\sisetup{exponent-product = \cdot, per-mode=fraction} % SI jelölések
+
+% Tikz
+\usetikzlibrary{math} % matematikai számítások Tikz-ben
+\usetikzlibrary{calc} % geometriai számítások (pl. koordináták)
+\usetikzlibrary{angles} % szögjelölések rajzolása
+\usetikzlibrary{quotes} % címkék és feliratok egyszerű kezelése
+\usetikzlibrary{arrows.meta} % nyílstílusok
+
+
+

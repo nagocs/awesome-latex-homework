@@ -1,0 +1,33 @@
+% --------------------------------------------------
+% Fájl: 01_commands.tex
+% --------------------------------------------------
+
+% --------------------------------------------------
+% Matematikai parancsok
+% --------------------------------------------------
+
+% Általános matematikai parancsok
+\renewcommand{\d}[1]{\mathrm{d}#1} % differenciál jel
+\renewcommand{\vec}[1]{\mathbf{#1}} % vektor jelölés
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert} % norma
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert} % abszolút érték
+
+% Lineár algebrai műveletek
+\DeclareMathOperator{\rank}{rank} % rang
+\DeclareMathOperator{\tr}{tr} % nyom (trace)
+\DeclareMathOperator{\diag}{diag} % diagonális mátrix
+
+% Vektoranalízis műveletek
+\DeclareMathOperator{\grad}{\mathbf{grad}} % grad
+\DeclareMathOperator{\rot}{\mathbf{rot}} % rot
+\DeclareMathOperator{\diverg}{\mathbf{div}} % div
+\DeclareMathOperator{\laplace}{\Delta} % Laplace-operátor
+
+% Egyéb műveletek
+\newcommand{\eval}[2]{\left. #1 \right|_{#2}} % kifejezés kiértékelése
+
+% --------------------------------------------------
+% Egyéb parancsok
+% --------------------------------------------------
+
+\newcommand*\circled[1]{\begin{tikzpicture}[baseline=(C.base)] \node[draw,circle,inner sep=2pt](C) {#1}; \end{tikzpicture}} % karikázás
