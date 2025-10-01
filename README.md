@@ -96,8 +96,6 @@ A dokumentum sablon használata a következő lépésekből áll:
 ## Példa
 Lásd a generált [`tutorial.pdf`](./tutorial.pdf) és [`tutorial.tex`](./tutorial.tex) fájlt a sablon használatának bemutatásához.
 
-<iframe src="tutorial.pdf" width="100%" height="600px"></iframe>
-
 ## Licenc
 Ez a projekt az MIT License alatt érhető el.  
 Ez azt jelenti, hogy a kód szabadon felhasználható, módosítható és terjeszthető, akár kereskedelmi célokra is, 
