@@ -96,7 +96,7 @@ A dokumentum sablon használata a következő lépésekből áll:
 ## Példa
 Lásd a generált [`tutorial.pdf`](./tutorial.pdf) és [`tutorial.tex`](./tutorial.tex) fájlt a sablon használatának bemutatásához.
 
-[![Sablon előnézete](figures/preview.png "Sablon előnézete")](files/sablon.pdf)
+[![Sablon előnézete](figures/preview.png "Sablon előnézete")](files/tutorial.pdf)
 
 ## Licenc
 Ez a projekt az MIT License alatt érhető el.  
