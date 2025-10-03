@@ -99,6 +99,9 @@ Lásd a generált [`tutorial.pdf`](./tutorial.pdf) és [`tutorial.tex`](./tutori
 [![Sablon előnézete](figures/preview.png "Sablon előnézete")](tutorial.pdf)
 
 ## Licenc
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Ez a projekt az MIT License alatt érhető el.  
 Ez azt jelenti, hogy a kód szabadon felhasználható, módosítható és terjeszthető, akár kereskedelmi célokra is, 
 feltéve, hogy a szerzői jogi megjegyzés és a licenc szövege minden másolatban szerepel.  
