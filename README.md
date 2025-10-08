@@ -1,6 +1,6 @@
 # Awesome $\LaTeX$ Homework
 
-Ez a repó egy egyszerűen használható dokumentum sablont tartalmaz, amely segítségével eékészítheted házi feladataidat $\LaTeX$-ben.  _A cél az, hogy ne a formázással kelljen bajlódnod, hanem a tartalomra koncentrálhass._
+Ez a repó egy egyszerűen használható dokumentum sablont tartalmaz, amely segítségével elkészítheted házi feladataidat $\LaTeX$-ben.  _A cél az, hogy ne a formázással kelljen bajlódnod, hanem a tartalomra koncentrálhass._
 
 Ha még csak most ismerkedsz a $\LaTeX$-kel, ez a sablon egy jó kiindulópont: segít átlátni a legfontosabb parancsokat és megmutatja, hogyan lehet professzionális kinézetű dokumentumot készíteni néhány egyszerű lépéssel.
 
