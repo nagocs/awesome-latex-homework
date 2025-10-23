@@ -27,6 +27,10 @@
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matematikai környezetek és szimbólumok
 \usepackage{mathtools} % kiegészítő matematikai eszközök az amsmath-hoz
 \usepackage{siunitx} % SI mértékegységek helyes jelölése
+\sisetup{%
+     output-decimal-marker = {,}, % tizedesvessző
+}
+\usepackage{icomma}
 
 % Fejléc, lábléc
 \usepackage{fancyhdr} % egyedi fejléc és lábléc készítése
@@ -58,6 +62,8 @@
 \cfoot{} % középső lábléc
 \rfoot{\small\thepage\ / \pageref{LastPage}} % jobb alsó sarok
 \headsep 1.5em % fejléc és szöveg közötti távolság
+
+\frenchspacing % A mondatvégi pont utáni hosszú szünetet szünteti meg, ami idegen a magyar nyelvtől
 
 % Hyperref beállítások - PDF megjelenítés
 \hypersetup{
