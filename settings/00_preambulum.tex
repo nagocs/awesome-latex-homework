@@ -17,11 +17,11 @@
 
 % Ábrák, grafikák
 \usepackage{graphicx} % klépek beillesztése és méretezése
-\usepackage{float} % ábrák és táblázatok elhelyezésének pontos szabályozása
+\usepackage{float} % ábrák és táblázatok elhelyezése
 \usepackage{caption} % képaláírások formázása
 \usepackage{tikz} % vektorgrafikák, ábrák rajzolása LaTeX-ben
 \usepackage{xcolor} % színek kezelése
-\usepackage{pdfpages} % teljes PDF-oldalak beillesztése a dokumentumba
+\usepackage{pdfpages} % teljes PDF-oldalak beillesztése
 
 % Matematikai és fizikai írásmód
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matematikai környezetek és szimbólumok
@@ -31,6 +31,9 @@
      output-decimal-marker = {,}, % tizedesvessző
 }
 \usepackage{icomma}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matek
+\usepackage{mathtools} % kiegészítő matematikai eszközök
+\usepackage{siunitx} % SI mértékegységek
 
 % Fejléc, lábléc
 \usepackage{fancyhdr} % egyedi fejléc és lábléc készítése
@@ -38,8 +41,8 @@
 
 % Dokumentumtagolás
 \usepackage{titlesec} % címsorok formázásának testreszabása
-\usepackage{csquotes} % idézetek helyes formázása (nyelvspecifikus)
-\usepackage{booktabs} % szép, tipográfiailag helyes táblázatok készítése
+\usepackage{csquotes} % idézetek formázása
+\usepackage{booktabs} % szép táblázatok készítése
 
 
 % --------------------------------------------------
@@ -82,9 +85,9 @@
 \addbibresource{contents/literature.bib} % irodalomjegyzék forrásfájl
 
 % Számozások beállítása fejezetenként
-% \numberwithin{equation}{section} % egyenletek számozása fejezetenként
-% \numberwithin{figure}{section} % ábrák számozása fejezetenként
-% \numberwithin{table}{section} % táblázatok számozása fejezetenként
+% \numberwithin{equation}{section} % egyenletek számozása
+% \numberwithin{figure}{section} % ábrák számozása
+% \numberwithin{table}{section} % táblázatok számozása
 
 % Táblázat formátum beállítása - Függőlegesen középre igazított szöveg
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % balra zárt
