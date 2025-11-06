@@ -24,6 +24,13 @@
 \usepackage{pdfpages} % teljes PDF-oldalak beillesztése
 
 % Matematikai és fizikai írásmód
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matematikai környezetek és szimbólumok
+\usepackage{mathtools} % kiegészítő matematikai eszközök az amsmath-hoz
+\usepackage{siunitx} % SI mértékegységek helyes jelölése
+\sisetup{%
+     output-decimal-marker = {,}, % tizedesvessző
+}
+\usepackage{icomma}
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd} % matek
 \usepackage{mathtools} % kiegészítő matematikai eszközök
 \usepackage{siunitx} % SI mértékegységek
@@ -58,6 +65,8 @@
 \cfoot{} % középső lábléc
 \rfoot{\small\thepage\ / \pageref{LastPage}} % jobb alsó sarok
 \headsep 1.5em % fejléc és szöveg közötti távolság
+
+\frenchspacing % A mondatvégi pont utáni hosszú szünetet szünteti meg, ami idegen a magyar nyelvtől
 
 % Hyperref beállítások - PDF megjelenítés
 \hypersetup{
